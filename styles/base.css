@@ -19,11 +19,9 @@ main{
 }
 img{
     max-width: 25%;
-    /* float:left; */
     margin-top: 40px;
     margin:auto;
     display:inline-block;
-    align-items: left;
     padding-right:30px;
 }
 header {
