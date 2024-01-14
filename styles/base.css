@@ -19,13 +19,15 @@ main{
 }
 img{
     max-width: 25%;
-    margin-right: 100px;
+    /* float:left; */
     margin-top: 40px;
     margin:auto;
-    display:block;
-
+    display:inline-block;
+    align-items: left;
+    padding-right:30px;
 }
 header {
+    position:relative;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -33,13 +35,13 @@ header {
     color: white;
     text-align: center;
 }
-/* header > div {
-    display: flex;
-    align-items: center;
-} */
 h1{
     margin-right: 20px;
     font-size: 30px;
+    margin:auto
+    display:inline-block;
+    padding:30px;
+    align-items: center;
 }
 header, a{
     display:block;
