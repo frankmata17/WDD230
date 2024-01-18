@@ -80,11 +80,15 @@ footer {
     display:grid;
 
 }
-.card ul {
+.card ul{
     list-style-type: none;
     padding: 0;
     margin: 0;
     text-decoration: none;
+    color:black;
+}
+.card a:link{
+    color: black;
 }
 .card2 ul {
     list-style-type: none;
