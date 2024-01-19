@@ -1,67 +1,96 @@
-body{
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     text-decoration: none;
-    margin:0;
+    margin: 0 auto;
+    /* height: 100vh; */
+    height: -webkit-fill-available;
+    display: flex;
+    flex-direction: column;
 }
-main{
-    display: grid;
+
+html {
+    height: -webkit-fill-available;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
     grid-template-columns: 1fr;
-    gap: 20px;
-    width:max-content;
-    margin:auto;
+    gap: 2%;
+    max-width: 1200px;
+    margin: auto;
     justify-content: center;
+    padding: 20px;
+    /* background-color: none; */
+    flex:1;
 }
-#title{
+
+#title {
     text-align: center;
     text-decoration: none;
     border-bottom: 1px solid black;
     padding-bottom: 5px; 
 }
-img{
-    max-width: 25%;
-    margin-top: 40px;
-    margin:auto;
-    display:inline-block;
-    padding-right:30px;
+
+img {
+    max-width: 200px;
+    height: auto;
+    margin-right: 20px;
 }
+
 header {
-    position:relative;
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: #023047;
     color: white;
     text-align: center;
-    /* height: 250px; */
+    width: 100%;
 }
-h1{
+
+h1 {
     margin-right: 20px;
     font-size: 30px;
-    margin:auto;
-    display:inline-block;
-    padding:30px;
+    margin: auto;
+    display: inline-block;
+    padding: 30px;
     align-items: center;
 }
-header, a{
-    display:block;
+
+header, a {
+    display: block;
     font-size: 15px;
     text-decoration: none;
 }
-nav{
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
     color: white;
     background-color: black;
-    padding: 3px;
+    padding: 1px;
     text-decoration: none;
 }
+
 nav a:link,
 nav a:visited {
     color: white;
     line-height: 1.3em;
     letter-spacing: normal;
+    text-decoration: none;
     margin-top: 5px;
     margin-bottom: 5px;
-    text-decoration: none;
+    display:block;
 }
+
+
 h3 {
     background-color: #023047;
     color: white;
@@ -74,27 +103,37 @@ footer {
     background-color: #023047;
     text-align: center;
     color: white;
-    margin:auto;
+    margin: auto;
     padding: 10px;
+    width: 100%;
+    position: sticky;
+    bottom:0;
 }
-.card{
-    display:grid;
 
+.card,
+.card2 {
+    display: grid;
+    gap: 2%;
+    width: 100%;
+    /* width: 48%; */
 }
-.card ul{
+
+.card ul {
     list-style-type: none;
     padding: 0;
     margin: 0;
     text-decoration: none;
-    color:black;
-}
-.card a:link{
     color: black;
 }
+
+.card a:link {
+    color: black;
+}
+
 .card2 ul {
     list-style-type: none;
-    padding: 15px;
+    padding: 10px;
     margin: 0;
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 0px;
 }
