@@ -124,6 +124,7 @@ footer {
     margin: 0;
     text-decoration: none;
     color: black;
+    text-align: left;
 }
 
 .card a:link {
