@@ -17,6 +17,8 @@
     <link rel="stylesheet" href="lesson01/styles/media-query-large.css"> -->
 
     <link rel="stylesheet" href="styles/larger.css">
+    <link rel="stylesheet" href="styles/medium.css">
+    <link rel="stylesheet" href="styles/smaller.css">
     <link rel="stylesheet" href="styles/base.css">
     <link rel="icon" href="favicon.ico">
     <title>Francisco Mata - WDD 230 - Web Frontend Development</title>
@@ -29,7 +31,8 @@
         <div>
             <h1><img src="images/me.jpg" alt="Me">Francisco Mata</h1>
         </div>
-        <nav>
+        <button id="menu"></button>
+        <nav class="navigation">
             <a id="home" href="#">Home</a>
             <a id="lesson03" href="lesson03/chamber-site-plan.html">Site Plan</a>
             <a href="chamber/">Chamber</a>
@@ -45,7 +48,9 @@
                 <li>
                     <a href="lesson01/holygrail.html" target="_blank">01:Holy Grail</a>
                     <a href="lesson02/design-principles.html" target="_blank">02:Design</a>
-                    <a href="">03:</a> <a href="images/CSS Combinators.png">CSS Combinators</a> <a href="https://codepen.io/Francisco-Mata/pen/bGZryVm">Codepen CSS Psuedo Elements</a> <a href="https://codepen.io/Francisco-Mata/pen/ExMvzeW">Responsive Menu</a>
+                    <a href="">03:</a>
+                    <a href="images/CSS_Combinators.png">CSS Combinators</a>
+                    <a href="https://codepen.io/Francisco-Mata/pen/bGZryVm">Codepen CSS Psuedo Elements</a> <a href="https://codepen.io/Francisco-Mata/pen/ExMvzeW">Responsive Menu</a>
                     <a href="">04:</a>
                     <a href="">05:</a>
                     <a href="">06:</a>
@@ -64,10 +69,30 @@
             </ul>
         </section>
     </main>
+    <div class="map-container">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d12160.080466739884!2d-111.74954195!3d40.3640783!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2s!5e0!3m2!1sen!2sus!4v1706154616874!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
     <footer>
         <p> &#169;Francisco Mata Utah</p>
         <p id="lastModified"></p>
     </footer>
     <script src="scripts/getdates.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const menuButton = document.getElementById('menu');
+            const navigation = document.querySelector('.navigation');
+    
+            menuButton.addEventListener('click', function () {
+                navigation.classList.toggle('show-menu');
+            });
+        });
+    </script>
+    <script>
+        document.getElementById('menu').addEventListener('click', function() {
+            var navigation = document.querySelector('.navigation');
+            this.classList.toggle('open');
+            navigation.classList.toggle('show-menu');
+        });
+    </script>
 </body>
 </html>
