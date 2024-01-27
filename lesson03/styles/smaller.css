@@ -1,0 +1,11 @@
+@media only screen and (max-width: 550px) {
+    .navigation {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navigation a {
+        display: block;
+        margin: 10px 0;
+    }
+}

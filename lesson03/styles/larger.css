@@ -1,0 +1,5 @@
+@media only screen and (min-width: 551px) {
+    .navigation a {
+        display: inline-block;
+    }
+}
