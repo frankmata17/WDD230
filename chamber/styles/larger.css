@@ -1,12 +1,51 @@
-@media only screen and (min-width: 600px) {
-    .navigation {
+@media only screen and (min-width: 1000px) {
+    header {
         display: flex;
-        flex-direction: column;
         justify-content: space-between;
         align-items: center;
+        padding: 1em;
+        text-align: center;
+        width: 100%;
     }
-    .navigation a {
-        display: block;
-        margin-right: 10px; /* Add spacing between navigation links */
+    img {
+        max-width: 80%; /* Adjust the percentage as needed */
+    }
+
+    #menu {
+        display: none;
+    }
+
+    .navigation {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin: 0;
+        padding: 1em;
+        align-items: center;
+        background-color: #003566;
+        color: white;
+    }
+
+    .navigation li {
+        display: flex;
+        flex-direction: row;
+        flex: 1 1 100%;
+    }
+
+    h1 .navigation {
+        margin: 10px 0;
+    }
+    main {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .card {
+        flex-basis: calc(50% - 20px);
+        margin: 10px;
+    }
+    .card1,
+    .card2,
+    .card3 {
+        flex: 100%;
     }
 }

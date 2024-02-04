@@ -1,11 +1,46 @@
-@media only screen and (min-width: 481px) {
+@media (min-width: 700px) {
+    header {
+        display: flex;
+        /* flex-direction: row; */
+        justify-content: space-between;
+        align-items: center;
+        padding: 1em;
+        text-align: center;
+        width: 100%;
+    }
+    img {
+        max-width: 80%; /* Adjust the percentage as needed */
+    }
+    h1 {
+        display: inline-block;
+        width: 100%;
+    }
+    #menu {
+        display: none;
+    }
+
     .navigation {
-        flex-direction: column;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
         align-items: center;
     }
 
-    .navigation a {
-        display: block;
+    h1 .navigation {
         margin: 10px 0;
+    }
+    main {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    .card {
+        flex-basis: 100%;
+        margin: 10px;
+    }
+    .card1,
+    .card2,
+    .card3 {
+        flex: 100%;
     }
 }

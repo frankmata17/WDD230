@@ -1,21 +1,18 @@
-// your-script.js
-
 document.addEventListener('DOMContentLoaded', function () {
-    const menuToggle = document.querySelector('.menu-toggle');
-    const mobileMenu = document.querySelector('.mobile-menu');
-    const lastModifiedElement = document.getElementById('lastModified');
+    const menuButton = document.getElementById('menu');
+    const navigation = document.querySelector('.navigation');
 
-    // Function to get the last modified date
-    function getLastModifiedDate() {
-        const lastModified = new Date(document.lastModified);
-        return lastModified.toDateString();
-    }
+    menuButton.addEventListener('click', function () {
+        navigation.classList.toggle('show-menu');
+        menuButton.classList.toggle('open');
+    });
 
-    // Update the last modified date on page load
-    lastModifiedElement.textContent = 'Last Modified: ' + getLastModifiedDate();
-
-    // Event listener for the menu toggle
-    menuToggle.addEventListener('click', function () {
-        mobileMenu.classList.toggle('show');
+    // Close the menu if a navigation link is clicked
+    const navLinks = document.querySelectorAll('.navigation a');
+    navLinks.forEach(link => {
+        link.addEventListener('click', function () {
+            navigation.classList.remove('show-menu');
+            menuButton.classList.remove('open');
+        });
     });
 });
