@@ -1,4 +1,4 @@
-@media only screen and (min-width: 1000px) {
+@media only screen and (min-width: 800px) {
     header {
         display: flex;
         justify-content: space-between;
@@ -7,8 +7,17 @@
         text-align: center;
         width: 100%;
     }
+    .fa {
+        order: 0; /* Reset the order property */
+        margin-right: 0; /* Reset the margin-right */
+    }
     img {
         max-width: 80%; /* Adjust the percentage as needed */
+    }
+    header > h1,
+    header > h2 {
+        margin: 0; /* Reset margin for h1 and h2 */
+        align-self: flex-start; /* Align h1 and h2 to the start (top) */
     }
 
     #menu {
@@ -32,7 +41,7 @@
         flex: 1 1 100%;
     }
 
-    h1 .navigation {
+    header .navigation {
         margin: 10px 0;
     }
     main {
@@ -47,5 +56,14 @@
     .card2,
     .card3 {
         flex: 100%;
+    }
+    .switch {
+        position: fixed;
+        top: 10px;
+        right: 10px; /* Adjust as needed */
+        z-index: 100;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 }

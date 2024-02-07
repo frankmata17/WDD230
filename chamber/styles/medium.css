@@ -5,15 +5,23 @@
         justify-content: space-between;
         align-items: center;
         padding: 1em;
-        text-align: center;
+        text-align: left;
         width: 100%;
     }
-    img {
+    .fa {
+        order: 0; /* Reset the order property */
+        margin-right: 0; /* Add some space between .fa and dark mode button */
+    }
+    header > logo {
         max-width: 80%; /* Adjust the percentage as needed */
+        order: -1; /* Move the logo to the left */
+        margin-right: 10px;
+        align-items: flex-start;
     }
-    h1 {
-        display: inline-block;
-        width: 100%;
+    header > h1,
+    header > h2 {
+        margin: 0; /* Reset margin for h1 and h2 */
+        align-self: flex-start; /* Align h1 and h2 to the start (top) */
     }
     #menu {
         display: none;
@@ -26,7 +34,7 @@
         align-items: center;
     }
 
-    h1 .navigation {
+    header .navigation {
         margin: 10px 0;
     }
     main {

@@ -18,14 +18,17 @@
     <link rel="stylesheet" href="styles/larger.css">
     <link rel="stylesheet" href="styles/medium.css">
     <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
 </head>
 <body>
-    <header>
-        <h1>San Diego Chamber of Commerce</h1>
+    <header class="dark-mode">
+        <img src="favicon_io/android-chrome-192x192.png" alt="logo" class="logo">
+        <h1>San Diego</h1>
+        <h2>Chamber of Commerce</h2>
         <button id="menu">&#9776;</button>
         <nav class="navigation">
             <a id="Home" href="#">Home</a>
@@ -33,21 +36,28 @@
             <a id="Directory" href="#">Directory</a>
             <a id="Join" href="#">Join</a>
         </nav>
+        <label class="switch">
+            <input type="checkbox">
+            <span class="slider round"></span>
+        </label>          
     </header>
     <img src="images/SanDiego_Skyline_.jpg.webp" alt="San Diego">
     <main>
         <button class="join">Join the Chamber!</button>
         <section class="card1"> 
             <h2>Upcoming Events</h2>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus esse quae amet itaque. Eos asperiores esse, sunt maxime deserunt veniam ipsa facere quaerat, vero quidem, architecto iste repellendus incidunt harum?</p>
         </section>
         <section class="card2">
             <h2>Weather</h2>
+            <div id="weather-info"></div>
         </section>
         <section class="card3">
             <h2>Spotlight of the Week</h2>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestiae veritatis aut dignissimos iusto accusantium molestias, exercitationem voluptate eaque maiores doloremque omnis, quibusdam voluptatem eius! Magni doloremque repudiandae ex veritatis quo.</p>
         </section>
     </main>
-    <footer>
+    <footer class="dark-mode">
         <p>&#169; Francisco Mata | Utah | WDD 230</p>
         <p id="lastModified"></p>
         <!-- <div class="mobile-menu">
@@ -56,23 +66,48 @@
             <a id="Directory" href="#">Directory</a>
             <a id="Join" href="#">Join</a>
         </div> -->
+        <a href="#" class="fa fa-facebook"></a>
+        <a href="#" class="fa fa-linkedin"></a>
     </footer>
     <script src="scripts/scripts.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             const menuButton = document.getElementById('menu');
             const navigation = document.querySelector('.navigation');
-
-            menuButton.addEventListener('click', function () {
-                if (navigation.classList.contains('show-menu')) {
-                    navigation.classList.remove('show-menu');
-                    menuButton.innerHTML = '&#9776;';
-                } else {
-                    navigation.classList.add('show-menu');
-                    menuButton.innerHTML = '&#10005;';
+            const weatherInfo = document.getElementById('weather-info');
+            const darkModeToggle = document.querySelector('.switch input');
+    
+            // Function to fetch weather data for San Diego from WeatherAPI
+            const getWeatherData = async () => {
+                const apiKey = '9122e15c99aa4d2e9fd45522240602';
+                const apiUrl = `http://api.weatherapi.com/v1/current.json?key=${apiKey}&q=San Diego&aqi=no`;
+    
+                try {
+                    const response = await fetch(apiUrl);
+                    const data = await response.json();
+    
+                    // Extract relevant weather information
+                    const temperature = data.current.temp_f;
+                    const description = data.current.condition.text;
+    
+                    // Update the content of the weather card
+                    weatherInfo.innerHTML = `
+                        <p>Temperature: ${temperature}°F</p>
+                        <p>Description: ${description}</p>
+                    `;
+                } catch (error) {
+                    console.error('Error fetching weather data:', error);
+                    weatherInfo.innerHTML = `<p>Failed to fetch weather data: ${error.message}</p>`;
                 }
+            };
+    
+            // Event listener for the menu button
+            menuButton.addEventListener('click', function () {
+                navigation.classList.toggle('show-menu');
+                menuButton.innerHTML = (navigation.classList.contains('show-menu')) ? '&#10005;' : '&#9776;';
             });
-
+    
+            // Event listener for navigation links
             const navLinks = document.querySelectorAll('.navigation a');
             navLinks.forEach(link => {
                 link.addEventListener('click', function () {
@@ -80,6 +115,14 @@
                     menuButton.innerHTML = '&#9776;';
                 });
             });
+
+            // Event listener for dark mode toggle
+            darkModeToggle.addEventListener('change', function () {
+            document.body.classList.toggle('dark-mode', darkModeToggle.checked);
+        });
+    
+            // Fetch weather data for San Diego when the page loads
+            getWeatherData();
         });
     </script>
 </body>

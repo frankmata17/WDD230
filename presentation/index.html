@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+    <button id="youClicked" onclick="alert('You Clicked!')">Click Me</button>
+    <p id="demo"></p>
+    <button id="myBtn">Try it</button>
+    <img src="Iron-Man.jpeg" alt="iron-man" onclick="alert('I am Iron Man!')">
+
+    <script>
+        document.getElementById("myBtn").addEventListener("click", displayDate);
+
+        function displayDate() {
+            document.getElementById("demo").innerHTML = Date();
+        }
+    </script>
+</body>
+</html>
