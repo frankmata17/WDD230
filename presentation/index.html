@@ -7,10 +7,13 @@
     <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
-    <button id="youClicked" onclick="alert('You Clicked!')">Click Me</button>
     <p id="demo"></p>
-    <button id="myBtn">Try it</button>
-    <img src="Iron-Man.jpeg" alt="iron-man" onclick="alert('I am Iron Man!')">
+    <button id="myBtn">Date/Time</button>
+    <img src="Iron-Man.jpeg" id="iron-man" alt="iron-man" onclick="alert('I am Iron Man!')">
+
+    <button id="myButton">Click Me</button>
+
+    <script src="scripts/scripts.js" defer></script>
 
     <script>
         document.getElementById("myBtn").addEventListener("click", displayDate);
@@ -19,5 +22,6 @@
             document.getElementById("demo").innerHTML = Date();
         }
     </script>
+    <!-- <button id="youClicked" onclick="alert('You Clicked!')">Click Me</button> -->
 </body>
 </html>
