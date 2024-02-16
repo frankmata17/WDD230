@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="lesson01/styles/media-query-large.css"> -->
 
     <link rel="stylesheet" href="styles/larger.css">
-    <link rel="stylesheet" href="styles/medium.css">
+    <!-- <link rel="stylesheet" href="styles/medium.css"> -->
     <link rel="stylesheet" href="styles/smaller.css">
     <link rel="stylesheet" href="styles/base.css">
     <link rel="icon" href="favicon.ico">
@@ -29,7 +29,7 @@
             <img src="images/DSC08365_Original copy.jpg" alt="Me">
         </div> -->
         <div>
-            <h1><img src="images/me.jpg" alt="Me">Francisco Mata</h1>
+            <h1><img src="images/me.webp" alt="Me">Francisco Mata</h1>
         </div>
         <button id="menu"></button>
         <nav class="navigation">
@@ -41,7 +41,21 @@
         </nav>
     </header>
     <main>
-        <h2 id="title">WDD 230: Web Frontend Development</h2>
+        <div class="hero">
+            <picture>
+                <source srcset="images/hero-small.webp" media="(max-width: 400px)">
+                <img src="images/san-diego-temple.webp" alt="San Diego Temple">
+            </picture>
+        </div>
+        
+        <div class="herolabel">
+            <p>San Diego Temple</p>
+        </div>
+
+        <h2 id="title">
+            WDD 230: Web Frontend Development
+        </h2>
+
         <section class="card">
             <h3>Learning Activities</h3>
             <ul>
