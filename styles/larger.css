@@ -6,6 +6,10 @@
         display: flex;
         flex-wrap: wrap;
     }
+    .navigation {
+        display:flex !important;
+        flex-direction: row;
+    }
     
     .card {
         order: 1;
