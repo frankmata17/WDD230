@@ -24,6 +24,7 @@ header > h1,
 header > h2 {
     margin: 0;
     align-self: flex-start; /* Align h1 and h2 to the start (top) */
+    font-size: 1.5em;
 }
 header > h1 {
     font-family: 'Roboto', sans-serif;
@@ -181,6 +182,19 @@ footer {
 .fa-linkedin {
     background: #007bb5;
     color: white;
+}
+.hero-image {
+    position: relative;
+    width: 100%;
+    height: 400px; /* Adjust the height as needed */
+    overflow: hidden;
+}
+
+/* Style the image inside the hero container */
+.hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure the image covers the entire container */
 }
 
 

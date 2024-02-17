@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="styles/larger.css">
     <link rel="stylesheet" href="styles/medium.css">
     <link rel="stylesheet" href="styles/normalize.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
 
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
@@ -26,7 +26,7 @@
 </head>
 <body>
     <header class="dark-mode">
-        <img src="favicon_io/android-chrome-192x192.png" alt="logo" class="logo">
+        <img src="favicon_io/SanDiego logo.webp" alt="logo" class="logo">
         <h1>San Diego | Chamber of Commerce</h1>
         <button id="menu">&#9776;</button>
         <nav class="navigation">
@@ -40,7 +40,20 @@
             <span class="slider round"></span>
         </label>          
     </header>
-    <img src="images/SanDiego_Skyline_.jpg.webp" alt="San Diego">
+    <div class="hero-image">
+        <!-- <img src="images/SanDiego_Skyline_.jpg.webp" alt="San Diego"> -->
+        <picture>
+            <source srcset="images/hero-small.webp" media="(max-width: 400px)">
+            <source srcset="images/hero-medium.webp" media="max-width: 1000px">
+            <source srcset="images/hero-large.webp">
+            <img src="images/hero-large.webp" alt="San Diego Temple"
+            width="1500" height="750">
+        </picture>
+        <div class="overlay small">Small</div>
+        <div class="overlay medium">Medium</div>
+        <div class="overlay large">Large</div>
+    </div>
+    <!-- <img src="images/SanDiego_Skyline_.jpg.webp" alt="San Diego"> -->
     <main>
         <button class="join">Join the Chamber!</button>
         <section class="card1"> 
@@ -49,7 +62,12 @@
         </section>
         <section class="card2">
             <h2>Weather</h2>
-            <div id="weather-info"></div>
+            <p id="temperature"></p>
+            <p id="wind-speed"></p>
+            <div id="weather-info">
+                <p id="wind-chill"></p>
+            </div>
+
         </section>
         <section class="card3">
             <h2>Spotlight of the Week</h2>
@@ -65,11 +83,15 @@
             <a id="Directory" href="#">Directory</a>
             <a id="Join" href="#">Join</a>
         </div> -->
-        <a href="https://www.facebook.com/" target="_blank" class="fa fa-facebook"></a>
-        <a href="https://www.linkedin.com/" target="_blank" class="fa fa-linkedin"></a>
+        <a href="" class="fa fa-facebook"></a>
+        <a href="" class="fa fa-linkedin"></a>
     </footer>
-    <script src="scripts/scripts.js"></script>
-    <script>
+    <!-- <script src="scripts/scripts.js"></script> -->
+    <script src="scripts/darkmode.js"></script>
+    <script src="scripts/navigation.js"></script>
+    <script src="scripts/weather.js"></script>
+    <script src="scripts/windchill.js"></script>
+    <!-- <script>
         document.addEventListener('DOMContentLoaded', function () {
             const menuButton = document.getElementById('menu');
             const navigation = document.querySelector('.navigation');
@@ -123,6 +145,6 @@
             // Fetch weather data for San Diego when the page loads
             getWeatherData();
         });
-    </script>
+    </script> -->
 </body>
 </html>
