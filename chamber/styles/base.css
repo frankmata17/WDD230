@@ -335,7 +335,7 @@ header.dark-mode {
     background-color: #1a1a1a;
     color: #ffffff;
     display: flex;
-    align-items: left;
+    /* align-items: left; */
     justify-content: flex-start;
     padding: 1em;
 }
