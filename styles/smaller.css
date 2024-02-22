@@ -54,11 +54,19 @@
 
     h1 {
         margin-right: 20px;
-        font-size: 30px;
-        margin: auto;
+        margin: 0;
         display: inline-block;
-        padding: 30px;
+        padding: 10px;
         align-items: center;
+        overflow: none;
+    }
+    header h1 {
+        font-size: 24px;
+        margin: 0;
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
     header,
@@ -96,6 +104,7 @@
     #menu {
         margin-right: 20px;
         order: -1;
+        margin-left: auto;
     }
     #menu::before {
         content: '☰';
