@@ -198,7 +198,7 @@ footer {
 }
 
 
-@media screen and (max-width: 499px) {
+@media screen and (max-width: 504px) {
     .navigation {
         display: none;
         flex-direction: column;
@@ -250,6 +250,32 @@ footer {
 
     #menu.open + .navigation {
         display: flex;
+    }
+    .calendar-container {
+        max-width: 100%;
+        margin: auto; /* Center the calendar */
+    }
+
+    .gallery {
+        text-align: center; /* Center the text in the gallery */
+        padding: 10px;
+    }
+    
+    .image-container {
+        margin: 0 auto; /* Center the image container */
+    }
+
+    .gallery img {
+        display: block;
+        margin: 0 auto; /* Center the images */
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+        /* transition: transform 0.3s ease-in-out; */
+    }
+
+    .gallery img:hover {
+        transform: none;
     }
 }
 
@@ -358,6 +384,10 @@ header.dark-mode h1 {
 header.dark-mode h2 {
     font-size: 1em;
 }
+.sidebar.dark-mode {
+    background-color: black;
+    color: white;
+}
 
 .social-icons a {
     margin-left: 1em;
@@ -368,4 +398,105 @@ header.dark-mode h2 {
 .logo {
     max-width: 50px;
     height: auto;
+}
+
+/* DISCOVER PAGE */
+
+.discover-main{
+    display: flex;
+}
+.sidebar {
+    flex: 1;
+    background-color: #f4f4f4;
+    padding: 20px;
+}
+.gallery {
+    flex: 3;
+    display:flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.gallery img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.3s ease-in-out;
+}
+.gallery img:hover {
+    transform: scale(1.1);
+}
+
+/* CALENDAR */
+.calendar-container {
+    width: 100%;
+    max-width: 100%; /* Adjust the maximum width as needed */
+    margin: auto;
+}
+.calendar {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    /* font-size: 14px; */
+}
+.calendar-header {
+    background-color: #003566;
+    color: white;
+    padding: 8px;
+    text-align: center;
+    font-size: 16px;
+}
+.calendar-days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 2px;
+    background-color: #f2f2f2;
+    padding: 5px;
+}
+.calendar-day {
+    text-align: center;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+td {
+    cursor: pointer;
+}
+
+td:hover {
+    background-color: #f0f0f0;
+}
+.current-date-message-container {
+    text-align: center;
+    padding: 10px;
+    background-color: #f2f2f2;
+    margin-bottom: 10px;
+}
+
+.current-date-message-container p {
+    margin: 0;
+    font-weight: bold;
+}
+.attractions ul {
+    list-style-type: none;
+    padding: 0;
+}
+.attractions p{
+    text-decoration: none;
+    text-align: left;
 }

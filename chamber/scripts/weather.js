@@ -19,16 +19,15 @@ document.addEventListener('DOMContentLoaded', function () {
 
             // Update the content of the weather card
             weatherInfo.innerHTML = `
-                <p id="temperature">Temperature: ${temperature}°F</p>
-                <p id="wind-speed">Wind Speed: ${data.current.wind_mph} mph</p>
-                <div id="weather-info">
-                    <p id="wind-chill"></p>
-                </div>
-                <p>Description: ${description}</p>
-            `;
+            <p id="temperature">Temperature: ${temperature}°F</p>
+            <p id="wind-speed">Wind Speed: ${data.current.wind_mph} mph</p>
+            <p id="wind-chill"></p>
+            <p>Description: ${description}</p>
+`;
 
-            // Callback to calculate wind chill
-            calculateWindChill(temperature, parseFloat(data.current.wind_mph));
+// Callback to calculate wind chill
+calculateWindChill(temperature, parseFloat(data.current.wind_mph));
+
         } catch (error) {
             console.error('Error fetching weather data:', error);
             weatherInfo.innerHTML = `<p>Failed to fetch weather data: ${error.message}</p>`;

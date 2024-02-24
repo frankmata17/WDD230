@@ -23,3 +23,4 @@ const windSpeed = parseFloat(windSpeedElement.textContent);
 
 // Call the function with extracted values
 calculateWindChill(temperature, windSpeed);
+
