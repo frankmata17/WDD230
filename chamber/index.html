@@ -62,10 +62,17 @@
         </section>
         <section class="card2">
             <h2>Weather</h2>
+            <div>
+                <p id="weather"></p>
+            </div>
             <div id="weather-info">
-                <p id="temperature"></p>
-                <p id="wind-speed"></p>
-                <p id="wind-chill"></p>
+                <label for="temperature">Temperature (°F): </label>
+                <input type="number" id="temperature" placeholder="Enter temperature" value="61">
+                <br>
+                <label for="windSpeed">Wind Speed (mph): </label>
+                <input type="number" id="windSpeed" placeholder="Enter wind speed" value="4.0">
+                <br>
+                <p>Wind Chill: <span id="windChill">N/A</span></p>
             </div>
 
         </section>
@@ -82,7 +89,7 @@
     </footer>
     <script src="scripts/darkmode.js"></script>
     <script src="scripts/navigation.js"></script>
-    <script src="scripts/weather.js"></script>
+    <script src="scripts/weather.js" ></script>
     <script src="scripts/windchill.js"></script>
     <!-- <script>
         document.addEventListener('DOMContentLoaded', function () {
