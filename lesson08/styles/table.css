@@ -1,0 +1,39 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+table {
+    width: 70%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+caption {
+    caption-side: top;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+thead .title th {
+    background-color: black;
+    color: white;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #f2f2f2;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: center;
+    padding: 8px;
+}
+
+thead .title th:not(:empty) {
+    background-color: #333;
+    color: white;
+}
