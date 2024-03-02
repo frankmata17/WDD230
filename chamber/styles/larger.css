@@ -66,4 +66,7 @@
         align-items: center;
         justify-content: center;
     }
+    .membership-benefits {
+        grid-template-columns: repeat(2, 1fr); /* Change to two columns */
+    }
 }

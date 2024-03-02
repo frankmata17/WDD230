@@ -499,3 +499,112 @@ td:hover {
     text-decoration: none;
     text-align: left;
 }
+
+/* JOIN */
+.join{
+    padding: var(--button-padding);
+    background-color: #003566;
+    color: white;
+    border: none;
+    cursor: pointer;
+    width: 30%;
+    border-radius: 5px; 
+    margin: 10px;
+}
+:root {
+    --form-padding: 20px;
+    --form-margin: auto;
+    --button-padding: 10px; /* Adjusted button padding for better visibility */
+}
+main.join-chamber {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+form {
+    padding: var(--form-padding);
+    margin: var(--form-margin);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 600px;
+    width: 100%;
+}
+
+label {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+    text-align: left;
+}
+.legend {
+    width: 100%; /* Ensure the legend takes full width of the label container */
+    max-width: 100%; /* Allow the legend to take full width */
+    padding: 0; /* Reset padding for better control */
+    margin-bottom: 10px; /* Add margin between legend and input fields */
+    font-weight: bold; /* Optionally, you can set font-weight for emphasis */
+}
+
+input {
+    margin-top: 5px;
+    padding: 10px;
+    width: 90%;
+
+}
+
+/* Styling for submit button */
+input[type="submit"] {
+    padding: var(--button-padding);
+    background-color: #003566;
+    color: white;
+    border: none;
+    cursor: pointer;
+    width: 30%;
+    border-radius: 5px; 
+    margin: 10px;
+}
+
+input[type="submit"]:hover {
+    background-color: #001e3c;
+}
+
+/* Membership benefits section */
+.membership-benefits {
+    max-width: 600px;
+    margin: 20px auto;
+}
+.membership {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    border: 1px solid #003566;
+    padding: 10px;
+}
+
+.membership h2 {
+    color: #003566;
+    grid-column: span 2;
+}
+
+.membership-type {
+    font-weight: bold;
+}
+
+.membership-description {
+    text-align: left;
+}
+.contact {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Dark mode styles (if needed) */
+body.dark-mode form {
+    background-color: #1a1a1a;
+    color: white;
+}
+
+body.dark-mode label {
+    color: white;
+}

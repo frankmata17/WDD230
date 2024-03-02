@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>San Diego Chamber of Commerce</title>
+
+    <meta name="description" content="A website for the San Diego Chamber of Commerce.">
+    <meta name="author" content="Francisco Mata">
+
+    <meta property="og:url" content="https://frankmata17.github.io/wdd230/chamber/index.html">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="San Diego Chamber of Commerce">
+    <meta property="og:image" content="https://www.visitcalifornia.com/places-to-visit/san-diego/">
+    <meta property="og:description" content="Chamber site home page for WDD 230">
+
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/larger.css">
+    <link rel="stylesheet" href="styles/medium.css">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
+</head>
+<body>
+    <header class="dark-mode">
+        <img src="favicon_io/SanDiego-logo.webp" alt="logo" class="logo">
+        <h1>San Diego | Chamber of Commerce</h1>
+        <button id="menu">&#9776;</button>
+        <nav class="navigation">
+            <a id="Home" href="index.html">Home</a>
+            <a id="Discover" href="discover.html">Discover</a>
+            <a id="Directory" href="#">Directory</a>
+            <a id="Join" href="#">Join</a>
+        </nav>
+        <label class="switch">
+            <input type="checkbox">
+            <span class="slider round"></span>
+        </label>          
+    </header>
+    <div class="hero-image">
+        <img src="images/SanDiego_Skyline_.jpg.webp" alt="San Diego">
+        <picture>
+            <source srcset="images/hero-small.webp" media="(max-width: 400px)">
+            <source srcset="images/hero-medium.webp" media="(max-width: 700px)">
+            <source srcset="images/hero-large.webp">
+            <!-- <img src="images/hero-large.webp" alt="San Diego Temple"
+            width="1500" height="750"> -->
+        </picture>
+        <div class="overlay small">Small</div>
+        <div class="overlay medium">Medium</div>
+        <div class="overlay large">Large</div>
+    </div>
+    <!-- <img src="images/SanDiego_Skyline_.jpg.webp" alt="San Diego"> -->
+    <main class="join-chamber">
+        <form method="get" action="thankyou.html">
+            <fieldset>
+                <legend class="legend">Join the Chamber</legend>
+                <label class="top" for="first-name">First Name* <input type="text" name="first-name" id="first-name" required></label>
+                <label class="top" for="last-name">Last Name* <input type="text" name="last-name" id="last-name" required></label>
+                <label class="top" for="title">Title/Position* <input type="text" name="title" id="title" pattern="^[A-Za-z\s-]{7,}$" required></label>
+                <label class="top" for="email">Email* <input type="email" id="email" name="email" placeholder="example@example.com" required></label>
+                <label class="top" for="phone">Phone* <input type="tel" id="phone" name="phone" required></label>
+                <label class="top" for="business">Business/Organization* <input type="text" id="business" name="business" required></label>
+                <label class="top" for="membership-level">Membership Level*
+                    <select id="membership-level" name="membership-level" required>
+                        <option value="NP">Non Profit (No Fee)</option>
+                        <option value="Bronze">Bronze Membership</option>
+                        <option value="Silver">Silver Membership</option>
+                        <option value="Gold">Gold Membership</option>
+                    </select>
+                </label>
+                <label class="top" for="description">Business/Organization Description <textarea id="description" name="description"></textarea></label>
+                <label><input type="hidden" name="timestamp" id="timestamp"></label>
+            </fieldset>
+            <input type="submit" value="Join Chamber" class="submitBtn">
+        </form>
+
+        <!-- Membership Level Benefits -->
+        <div class="membership-benefits">
+            <div class="membership">
+                <h2>Membership Level Benefits</h2>
+                <div class="membership-type">Non Profit (NP):</div>
+                <div class="membership-description">No fee, basic benefits.</div>
+                <div class="membership-type">Bronze Membership:</div>
+                <div class="membership-description">Intermediate benefits including event discounts.</div>
+                <div class="membership-type">Silver Membership:</div>
+                <div class="membership-description">Enhanced benefits with special events and training.</div>
+                <div class="membership-type">Gold Membership:</div>
+                <div class="membership-description">Premium benefits, spotlight positions on the home page, and more.</div>
+                <div class="contact">*Fill out our form so we can contact you about membership pricing!</div>
+            </div>
+
+    </main>
+    <footer class="dark-mode">
+        <p>&#169; Francisco Mata | Utah | WDD 230</p>
+        <p id="lastModified"></p>
+        <a href="" class="fa fa-facebook"></a>
+        <a href="" class="fa fa-linkedin"></a>
+    </footer>
+    <script src="scripts/darkmode.js"></script>
+    <script src="scripts/navigation.js"></script>
+    <script>
+        document.getElementById("form-load-time").value = Date.now();
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Get the hidden input element
+            var timestampInput = document.getElementById('timestamp');
+    
+            
+            timestampInput.value = Date.now();
+        });
+    </script>
+    
+</body>
+</html>
