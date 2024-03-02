@@ -102,14 +102,11 @@
     <script src="scripts/darkmode.js"></script>
     <script src="scripts/navigation.js"></script>
     <script>
-        document.getElementById("form-load-time").value = Date.now();
-    </script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
+        document.addEventListener('DOMContentLoaded', function() {
             // Get the hidden input element
             var timestampInput = document.getElementById('timestamp');
     
-            
+            // Set the value of the hidden input to the current date/time in milliseconds
             timestampInput.value = Date.now();
         });
     </script>
