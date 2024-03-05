@@ -1,0 +1,39 @@
+{
+"familyName" : "Valdivia",
+"dateMovedIn" : "2024-1-1",
+"numberOfMembers" : 6,
+"visitedByBishopric" : true,
+"familyMembers" : [
+    {
+        "name" : "Jesus Valdivia",
+        "gender" : "male",
+        "birthdate" : "9-18-1969"
+    
+    },
+    {
+        "name" : "Martha Valdivia",
+        "gender" : "female",
+        "birthdate" : "5-12-1972"
+    },
+    {
+        "name" : "Sarai Avila",
+        "gender" : "female",
+        "birthdate" : "7-16-1995"
+    },
+    {
+        "name" : "Josue Avila",
+        "gender" : "female",
+        "birthdate" : "8-20-1996"
+    },
+    {
+        "name" : "Melissa Valdivia",
+        "gender" : "female",
+        "birthdate" : "5-2-1999"
+    },
+    {
+        "name" : "Jancarlo Valdivia",
+        "gender" : "female",
+        "birthdate" : "9-15-2002"
+    }
+]
+}
