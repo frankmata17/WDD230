@@ -10,13 +10,11 @@ body {
 main {
     display: flex;
     flex-wrap: wrap;
-    grid-template-columns: 1fr;
     gap: 2%;
     max-width: 1000px;
     margin: auto;
     justify-content: center;
     padding: 20px;
-    /* background-color: none; */
     flex:1;
 }
 .hero {
@@ -144,9 +142,9 @@ footer {
 
 .card,
 .card2 {
-    display: grid;
-    gap: 2%;
-    width: 100%;
+    flex: 1;
+    min-width: calc(50% - 20px);
+    max-width: calc(50% - 20px);
     overflow: hidden;
 }
 
