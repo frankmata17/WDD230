@@ -1,0 +1,92 @@
+{
+    "lessons" : [
+        {
+            "lesson" : "02",
+            "links" : [
+                {
+                    "url":"lesson02/mediaquery.html",
+                    "title":"Media Queries"
+                },
+                {
+                    "url":"lesson02/design-principles.html",
+                    "title":"Design Principles Document"
+                }
+            ]
+        },
+        {
+            "lesson":"03",
+            "links": [
+                {
+                    "url":"https://frankmata17.github.io/wdd230/images/CSS_Combinators.png",
+                    "title":"CSS Combinators"
+                },
+                {
+                    "url":"https://codepen.io/Francisco-Mata/pen/bGZryVm",
+                    "title":"CSS Pseudo Elements"
+                },
+                {
+                    "url":"https://codepen.io/Francisco-Mata/pen/ExMvzeW",
+                    "title":"Responsive Menu"
+                }
+            ]
+        },
+        {
+            "lesson":"04",
+            "links": [
+                {
+                    "url":"https://codepen.io/Francisco-Mata/pen/ZEPrxVQ",
+                    "title":"Pseudo-class Fun"
+                }
+            ]
+        },
+        {
+            "lesson":"05",
+            "links": [
+                {
+                    "url":"https://frankmata17.github.io/wdd230/lesson03/images/pexels-pixabay-158316.webp",
+                    "title":"WebP"
+                },
+                {
+                    "url":"lesson05/bom.html",
+                    "title":"Book of Mormon - Top 10"
+                }
+            ]
+            
+        },
+        {
+            "lesson":"06",
+            "links": [
+                {
+                    "url":"lesson06/responsive-images.html",
+                    "title":"Responsive Images: srcset"
+                }
+            ]
+        },
+        {
+            "lesson":"07",
+            "links": [
+                {
+                    "url":"https://frankmata17.github.io/wdd230/lazy/lazyload.html",
+                    "title":"Lazy Load"
+                },
+                {
+                    "url":"lesson07/bom.html",
+                    "title":"BOM Top 10 - localStorage"
+                }
+            ]
+        },
+        {
+            "lesson":"08",
+            "links": [
+                {
+                    "url":"lesson08/tablebuild.html",
+                    "title":"HTML Tables"
+                },
+                {
+                    "url":"lesson08/webForm/index.html",
+                    "title":"HTML Forms"
+                }
+            ]
+        }
+    ]
+}
