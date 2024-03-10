@@ -1,0 +1,67 @@
+{
+    "members": [
+    {
+        "name": "Shopdragon Marketing, LLC",
+        "address": "123 Main St, San Diego, CA 92101",
+        "phone": "(513) 288-9332",
+        "website": "https://09b724.myshopify.com/",
+        "image": "https://09b724.myshopify.com/cdn/shop/files/yellow-couch-by-black-and-white-mural.jpg?v=1686753851&width=360",
+        "membershipLevel": "Silver",
+        "additionalInfo": "level up your brand expert one-on-one brand management, plus save time and money with without the fuss of managing a full-time brand manager or agency."
+    },
+    {
+        "name": "Actionera",
+        "address": "1399 9th Ave 1314 San Diego, CA 92101",
+        "phone": "(619) 762-4777",
+        "website": "https://actionera.com/",
+        "image": "https://images.leadconnectorhq.com/image/f_webp/q_80/r_900/u_https://assets.cdn.filesafe.space/G06w1kdwSg4Yk1UJbhza/media/656681bdfff0faa85b0b5c63.png",
+        "membershipLevel": "Silver",
+        "additionalInfo": "THE ULTIMATE MOBILE APP AND ALL-IN-ONE MARKETING PLATFORM FOR EXPERTS "
+    },
+    {
+        "name": "March of Dimes",
+        "address": "1550 Crystal Dr, Suite 1300 Arlington, VA 22202",
+        "phone": "(760) 310-9467",
+        "website": "https://www.marchofdimes.org/",
+        "image": "https://www.marchofdimes.org/sites/default/files/styles/4x3_x_small_400x300_/public/2024-02/MoD_Logo.png?h=827069f2&itok=3dDaUo7Y",
+        "membershipLevel": "Silver",
+        "additionalInfo": "Help us improve the health of all moms and babies"
+    },
+    {
+        "name": "San Diego Fire-Rescue Foundation",
+        "address": "San Diego Fire-Rescue Foundation P.O. Box 235837 Encinitas, CA 92023-5837",
+        "phone": "619.410.4742",
+        "website": "https://sdfirerescue.org/",
+        "image": "https://nfg-sofun.s3.amazonaws.com/uploads/project/photo/116549/poster_board_iStock-168623556.jpg",
+        "membershipLevel": "Silver",
+        "additionalInfo": "SAN DIEGO FIRE-RESCUE FOUNDATION THE BETTER PREPARED THEY ARE–THE BETTER PROTECTED WE ARE"
+    },
+    {
+        "name": "Sublym.Digital",
+        "address": "2683 Via De La Valle, Ste G-508 Del Mar, California 92014",
+        "phone": "(858) 354-9726",
+        "website": "https://www.sublym.digital/",
+        "image": "https://assets-global.website-files.com/5ed413e378a138a85df8d5e6/5edda61f255e442aeba69d7e_WhoWeWorkWith-p-800.jpeg",
+        "membershipLevel": "Silver",
+        "additionalInfo": "Elevating Brands Above The Maelstrom"
+    },
+    {
+        "name": "Wave Neuro",
+        "address": "2177 San Elijo Ave, Cardiff, CA 92007",
+        "phone": "(858) 306-1070",
+        "website": "https://braincarecardiff.com/",
+        "image": "https://sa1s3optim.patientpop.com/768x/filters:format(webp)/sc-assets/prd/practices/0beecf3a-e721-42ae-86c8-f421c9a2606b/AdobeStock_451771891.jpeg",
+        "membershipLevel": "Silver",
+        "additionalInfo": "Braincare is your first step to a brighter future."
+    },
+    {
+        "name": "Elevated Travel Journeys",
+        "address": "456 Oak St, City, State 56789",
+        "phone": "(617) 763-7377",
+        "website": "https://www.elevatedtraveljourneys.com/",
+        "image": "https://www.elevatedtraveljourneys.com/wp-content/uploads/2023/12/elevated-travel-journeys-banner-1024x256.png",
+        "membershipLevel": "Silver",
+        "additionalInfo": "Embark on an adventure with Elevated Travel Journeys."
+    }
+    ]
+}

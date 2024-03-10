@@ -608,3 +608,55 @@ body.dark-mode form {
 body.dark-mode label {
     color: white;
 }
+
+/* DIRECTORY */
+
+.directory-container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+.view-toggle {
+    display: inline-block;
+    margin-right: 10px;
+    margin-bottom: 5px;
+}
+label {
+    display: inline-block;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+#members-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+#members-container.list-view {
+    grid-template-columns: 1fr;
+    
+}
+
+.member-card {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+.member-card img {
+    max-width: 100%;
+    height: auto;
+}
+
+.list-view .member-card img {
+    display: none;
+}
+
+.member-list-item {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #003566;
+    padding: 10px;
+    margin-bottom: 20px; /* Adjust as needed */
+}
