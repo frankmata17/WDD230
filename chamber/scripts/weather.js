@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const darkModeToggle = document.querySelector('.switch input');
 
     const getWeatherData = async () => {
-        const apiKey = '9122e15c99aa4d2e9fd45522240602';
+        const apiKey = '9aaed584a6c3babdc850ec2c4c570509';
         const apiUrl = `http://api.weatherapi.com/v1/current.json?key=${apiKey}&q=San Diego&aqi=no`;
 
         try {

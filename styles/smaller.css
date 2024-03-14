@@ -1,6 +1,6 @@
 /* MOBILE VIEW */
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 700px) {
     body {
         font-family: Verdana, Geneva, Tahoma, sans-serif;
         text-decoration: none;
@@ -14,7 +14,7 @@
         flex-direction: column;
         flex-wrap: wrap;
         gap: 2%;
-        max-width: 1200px;
+        max-width: 100%;
         margin: auto;
         justify-content: center;
         padding: 20px;
@@ -105,11 +105,15 @@
     }
 
     h3 {
+        width: 100%; /* Make h3 stretch across the device */
+        display: inline-block; /* Ensure h3 is displayed as inline-block */
         background-color: #023047;
         color: white;
         text-align: center;
         padding: 10px;
         border-radius: 5px;
+        box-sizing: border-box; /* Ensure padding is included in the width */
+        margin: 0; 
     }
 
     footer {
@@ -123,9 +127,42 @@
         bottom: 0;
     }
 
+    .card {
+        padding: 20px;
+        border-radius: 5px;
+        height: 300px; /* Set a fixed height for the card */
+        overflow-y: auto;
+    }
+    
+    .card ul {
+        list-style-type: none;
+        padding: 0;
+    }
+    
+    .card ul li {
+        margin-bottom: 10px;
+    }
+    
+    .card ul li a {
+        text-decoration: none;
+        color: #333;
+        font-weight: bold;
+    }
+    
+    .card ul li a:hover {
+        color: #007bff;
+    }
+    
+
     .card,
     .card2 {
         width: 100%;
+        margin: auto;
+        max-width: 100%;
+        overflow: scroll;
+        word-wrap: break-word;
+        overflow-y: auto;
+        height: 300px;
     }
 
     .card ul,
@@ -170,7 +207,7 @@
 
     .herolabel {
         position: absolute;
-        top: 30%;
+        top: 40%;
         left: 20%;
         background: radial-gradient(#fff, #4D5B97);
         border: 1px solid rgba(0, 0, 0, .75);
