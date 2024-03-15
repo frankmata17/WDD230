@@ -29,11 +29,11 @@ header > h2 {
 header > h1 {
     font-family: 'Roboto', sans-serif;
     margin-left: 10px;
-    margin-right: 5px;
+    margin-right: 10px;
 }
 header > h2 {
     margin: 0;
-    color: #000000; /* Adjusted color */
+    color: #000000;
 }
 
 header > img {
@@ -54,8 +54,8 @@ img {
     display: none;
     justify-content: center;
     align-items: center;
-    background-color: #003566;
-    color: white;
+    background-color: white;
+    color: black;
     padding: 10px;
     list-style: none;
     margin: 0 auto;
@@ -67,13 +67,14 @@ img {
 }
 
 .navigation a {
-    color: white;
+    color: black;
     text-decoration: none;
     padding: 10px;
     display: block;
     text-align: center;
     text-decoration: none;
     transition: 0.5s;
+    font-size: 1.4rem;
 }
 
 .active::first-line {
@@ -354,6 +355,12 @@ input:checked + .slider:before {
 body.dark-mode {
     background-color: #000;
     color: #fff;
+}
+body.dark-mode .navigation a {
+    color: white;
+}
+body.dark-mode .navigation {
+    background-color: #1a1a1a;
 }
 
 header.dark-mode {
