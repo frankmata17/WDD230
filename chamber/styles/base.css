@@ -23,13 +23,16 @@ header {
 header > h1,
 header > h2 {
     margin: 0;
-    align-self: flex-start; /* Align h1 and h2 to the start (top) */
+    align-self: flex-start;
     font-size: 1.5em;
 }
 header > h1 {
     font-family: 'Roboto', sans-serif;
     margin-left: 10px;
     margin-right: 10px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
 }
 header > h2 {
     margin: 0;

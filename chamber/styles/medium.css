@@ -23,6 +23,14 @@
         margin: 0; /* Reset margin for h1 and h2 */
         align-self: flex-start; /* Align h1 and h2 to the start (top) */
     }
+    header > h1 {
+        font-family: 'Roboto', sans-serif;
+        margin-left: 10px;
+        margin-right: 10px;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+    }
     #menu {
         display: none;
     }
