@@ -393,10 +393,6 @@ header.dark-mode h1 {
 header.dark-mode h2 {
     font-size: 1em;
 }
-.sidebar.dark-mode {
-    background-color: black;
-    color: white;
-}
 
 .social-icons a {
     margin-left: 1em;
@@ -411,13 +407,20 @@ header.dark-mode h2 {
 
 /* DISCOVER PAGE */
 
+.sidebar,
+.sidebar.dark-mode {
+    flex: 1;
+    background-color: #f4f4f4; /* Light background color */
+    color: black; /* Dark text color */
+    padding: 20px;
+}
+
+.sidebar.dark-mode {
+    background-color: black; /* Dark background color */
+    color: white; /* Light text color */
+}
 .discover-main{
     display: flex;
-}
-.sidebar {
-    flex: 1;
-    background-color: #f4f4f4;
-    padding: 20px;
 }
 .gallery {
     flex: 3;
@@ -668,5 +671,13 @@ label {
     flex-direction: column;
     border: 1px solid #003566;
     padding: 10px;
-    margin-bottom: 20px; /* Adjust as needed */
+    margin-bottom: 20px;
+}
+
+.member-list-item h3 {
+    margin-bottom: 5px;
+}
+
+.member-list-item p {
+    margin: 5px 0;
 }

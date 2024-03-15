@@ -32,8 +32,6 @@ document.addEventListener('DOMContentLoaded', function () {
                                 <p>${member.address}</p>
                                 <p>Phone: ${member.phone}</p>
                                 <p>Website: <a href="${member.website}" target="_blank">${member.website}</a></p>
-                                <p>Membership Level: ${member.membershipLevel}</p>
-                                <p>${member.additionalInfo}</p>
                             </div>`;
                 }
             }).join('');
