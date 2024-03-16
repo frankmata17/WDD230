@@ -1,12 +1,20 @@
 document.addEventListener('DOMContentLoaded', function () {
-    const apiKey = '9aaed584a6c3babdc850ec2c4c570509';
+    const apiKey = '8b0372f233caec5f0db0f6f80aa340e8';
 
     const getThreeDayForecast = async () => {
-        const apiUrl = `https://api.openweathermap.org/data/2.5/forecast?q=San%20Diego&appid=${apiKey}&units=imperial`;
+        // Replace the latitude and longitude values with the coordinates of San Diego
+        const lat = '32.7157';
+        const lon = '-117.1611';
+        const apiUrl = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${apiKey}&units=imperial`;
+        
 
         try {
             const response = await fetch(apiUrl);
+            if (!response.ok) {
+                throw new Error(`Failed to fetch forecast data: ${response.status} ${response.statusText}`);
+            }
             const data = await response.json();
+            console.log('Forecast data:', data); // Log the forecast data to inspect it
 
             const dailyForecast = groupForecastByDay(data.list);
 
@@ -36,6 +44,10 @@ document.addEventListener('DOMContentLoaded', function () {
     };
 
     const groupForecastByDay = (forecastData) => {
+        if (!forecastData || forecastData.length === 0) {
+            return [];
+        }
+
         const dailyForecast = {};
         forecastData.forEach(forecast => {
             const date = forecast.dt_txt.split(' ')[0];
@@ -59,11 +71,13 @@ document.addEventListener('DOMContentLoaded', function () {
     const getMostCommonWeatherDescription = (forecasts) => {
         const descriptions = {};
         forecasts.forEach(forecast => {
-            const description = forecast.weather[0].description;
-            if (descriptions[description]) {
-                descriptions[description]++;
-            } else {
-                descriptions[description] = 1;
+            if (forecast.weather && forecast.weather.length > 0) {
+                const description = forecast.weather[0].description;
+                if (descriptions[description]) {
+                    descriptions[description]++;
+                } else {
+                    descriptions[description] = 1;
+                }
             }
         });
         return Object.keys(descriptions).reduce((a, b) => descriptions[a] > descriptions[b] ? a : b);
