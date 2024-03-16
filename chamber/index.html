@@ -40,6 +40,9 @@
             <span class="slider round"></span>
         </label>          
     </header>
+    <div id="banner" class="banner">
+        <p>Join us for the Chamber of Commerce meet and greet on Wednesday at 7:00 p.m. <button id="closeBanner">Close</button></p>
+    </div>
     <div class="hero-image">
         <img src="images/SanDiego_Skyline_.jpg.webp" alt="San Diego">
         <picture>
@@ -60,25 +63,32 @@
             <h2>Upcoming Events</h2>
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus esse quae amet itaque. Eos asperiores esse, sunt maxime deserunt veniam ipsa facere quaerat, vero quidem, architecto iste repellendus incidunt harum?</p>
         </section>
-        <section class="card2">
-            <h2>Weather</h2>
-            <div>
-                <p id="weather"></p>
-            </div>
-            <div id="weather-info">
-                <label for="temperature">Temperature (°F): </label>
-                <input type="number" id="temperature" placeholder="Enter temperature" value="61">
-                <br>
-                <label for="windSpeed">Wind Speed (mph): </label>
-                <input type="number" id="windSpeed" placeholder="Enter wind speed" value="4.0">
-                <br>
-                <p>Wind Chill: <span id="windChill">N/A</span></p>
-            </div>
 
+        <section class="card2">
+        <h2>Weather</h2>
+        <div>
+            <p id="current-temperature"></p>
+            <p id="weather-description"></p>
+        </div>
+        <h3>Three Day Forecast</h3>
+        <div class="forecast-container" id="forecast-container">
+        <!-- Forecast items will be dynamically added here -->
+        </div>
         </section>
+
         <section class="card3">
             <h2>Spotlight of the Week</h2>
             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestiae veritatis aut dignissimos iusto accusantium molestias, exercitationem voluptate eaque maiores doloremque omnis, quibusdam voluptatem eius! Magni doloremque repudiandae ex veritatis quo.</p>
+        </section>
+        <section class="card4">
+            <h2>Windchill</h2>
+            <div class="input-fields">
+                <label for="temperature" class="label">Temperature (°F):</label>
+                <input type="number" id="temperature" class="input-field" value="50">
+                <label for="windSpeed" class="label">Wind Speed (mph):</label>
+                <input type="number" id="windSpeed" class="input-field" value="5">
+            </div>
+            <p id="windChill"></p>
         </section>
     </main>
     <footer class="dark-mode">
@@ -91,6 +101,7 @@
     <script src="scripts/navigation.js"></script>
     <script src="scripts/weather.js" ></script>
     <script src="scripts/windchill.js"></script>
+    <script src="scripts/banner.js"></script>
     <!-- <script>
         document.addEventListener('DOMContentLoaded', function () {
             const menuButton = document.getElementById('menu');

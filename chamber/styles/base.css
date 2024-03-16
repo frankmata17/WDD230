@@ -7,6 +7,7 @@ body {
     flex-direction: column;
     min-height: 100vh;
     overflow-x:hidden;
+    font-family: 'Roboto', sans-serif;
 }
 
 header {
@@ -53,6 +54,8 @@ img {
     height: auto;
 }
 
+/* NAVIGATION */
+
 .navigation {
     display: none;
     justify-content: center;
@@ -78,6 +81,19 @@ img {
     text-decoration: none;
     transition: 0.5s;
     font-size: 1.4rem;
+    
+}
+.navigation a:visited {
+    color: rgb(92, 7, 92);
+}
+.navigation a:hover {
+    color: black;
+    text-decoration: underline;
+    font-size: 1.5rem;
+    border-radius: 5px;
+    padding: 5px;
+    transform: translateY(-2px);
+
 }
 
 .active::first-line {
@@ -159,6 +175,9 @@ footer {
     margin: 10px;
     text-align: center;
 }
+.card2 {
+    background: linear-gradient(to bottom, #b3c0ff, #e0e5ff); /* Adjust colors as needed */
+}
 .fa {
     padding: 20px;
     font-size: 30px;
@@ -202,7 +221,7 @@ footer {
 }
 
 
-@media screen and (max-width: 504px) {
+@media screen and (max-width: 685px) {
     .navigation {
         display: none;
         flex-direction: column;
@@ -211,13 +230,23 @@ footer {
         position: fixed;
         top: 64px;
         left: 0;
-        background-color: #003566;
+        background-color: #989a9c;
         padding: 10px;
         z-index: 1;
     }
 
     .navigation.show {
         display: flex;
+    }
+    .navigation.show #menu::before {
+        display: none;
+    }
+    .navigation.show #menu::after {
+        content: '✕'; /* Close icon */
+        display: block;
+    }
+    .navigation:not(.show) #menu::after {
+        display: none;
     }
 
     #menu {
@@ -247,9 +276,9 @@ footer {
         display: none;
     }
 
-    #menu::before {
+    /* #menu::before {
         content: '☰'; 
-    }
+    } */
 
     #menu.open::before {
         content: "x";
@@ -410,14 +439,14 @@ header.dark-mode h2 {
 .sidebar,
 .sidebar.dark-mode {
     flex: 1;
-    background-color: #f4f4f4; /* Light background color */
-    color: black; /* Dark text color */
+    background-color: #f4f4f4;
+    color: black;
     padding: 20px;
 }
 
 .sidebar.dark-mode {
-    background-color: black; /* Dark background color */
-    color: white; /* Light text color */
+    background-color: black;
+    color: white;
 }
 .discover-main{
     display: flex;
@@ -527,7 +556,7 @@ td:hover {
 :root {
     --form-padding: 20px;
     --form-margin: auto;
-    --button-padding: 10px; /* Adjusted button padding for better visibility */
+    --button-padding: 10px;
 }
 main.join-chamber {
     display: flex;
@@ -552,11 +581,11 @@ label {
     text-align: left;
 }
 .legend {
-    width: 100%; /* Ensure the legend takes full width of the label container */
-    max-width: 100%; /* Allow the legend to take full width */
-    padding: 0; /* Reset padding for better control */
-    margin-bottom: 10px; /* Add margin between legend and input fields */
-    font-weight: bold; /* Optionally, you can set font-weight for emphasis */
+    width: 100%;
+    max-width: 100%;
+    padding: 0;
+    margin-bottom: 10px;
+    font-weight: bold;
 }
 
 input {
@@ -566,7 +595,6 @@ input {
 
 }
 
-/* Styling for submit button */
 input[type="submit"] {
     padding: var(--button-padding);
     background-color: #003566;
@@ -582,7 +610,6 @@ input[type="submit"]:hover {
     background-color: #001e3c;
 }
 
-/* Membership benefits section */
 .membership-benefits {
     max-width: 600px;
     margin: 20px auto;
@@ -680,4 +707,56 @@ label {
 
 .member-list-item p {
     margin: 5px 0;
+}
+/* 3 DAY FORECAST */
+.forecast-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.forecast-item {
+    flex-basis: calc(33.33% - 20px);
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+.weather-icon {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 5px;
+}
+
+/* BANNER */
+
+.banner {
+    background-color: #f6d3d3;
+    color: #333;
+    padding: 10px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.banner:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+#closeBanner {
+    background: none;
+    border: none;
+    color: #007bff;
+    cursor: pointer;
+}
+
+/* WIND CHILL */
+
+.input-field {
+    width: 60px; /* Adjust width as needed */
+    padding: 8px; /* Add padding for better appearance */
+    margin-right: 10px; /* Add margin between input fields */
+    border: 1px solid #ccc; /* Add border for better visibility */
+    border-radius: 5px; /* Add border radius for rounded corners */
+    box-sizing: border-box; /* Ensure padding and border are included in the width */
 }
