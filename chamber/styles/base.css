@@ -7,7 +7,9 @@ body {
     flex-direction: column;
     min-height: 100vh;
     overflow-x:hidden;
-    font-family: 'Roboto', sans-serif;
+    font-family: "Madimi One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
 header {
@@ -18,21 +20,14 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: space-between;
+    font-family: "Madimi One", sans-serif;
 }
 
-header > h1,
-header > h2 {
-    margin: 0;
-    align-self: flex-start;
-    font-size: 1.5em;
-}
 header > h1 {
-    font-family: 'Roboto', sans-serif;
-    margin-left: 10px;
-    margin-right: 10px;
-    text-align: center;
-    align-items: center;
+    margin: 0;
+    align-self: center;
+    font-size: 1.7em;
     justify-content: center;
 }
 header > h2 {
@@ -175,8 +170,27 @@ footer {
     margin: 10px;
     text-align: center;
 }
+.card1 h2 {
+    text-align: center;
+}
+.card1 {
+    text-align: left;
+    padding: 2px;
+}
+
+.card1 h3 {
+    font-weight: bold;
+}
+
+.card1 article {
+    margin-bottom: 20px;
+}
+
 .card2 {
     background: linear-gradient(to bottom, #b3c0ff, #e0e5ff); /* Adjust colors as needed */
+}
+.card3 p {
+    text-align: left;
 }
 .fa {
     padding: 20px;
@@ -230,7 +244,7 @@ footer {
         position: fixed;
         top: 64px;
         left: 0;
-        background-color: #989a9c;
+        background-color: white;
         padding: 10px;
         z-index: 1;
     }
@@ -247,6 +261,10 @@ footer {
     }
     .navigation:not(.show) #menu::after {
         display: none;
+    }
+    header >h1 {
+        margin: 0;
+        align-self: center;
     }
 
     #menu {
@@ -433,6 +451,9 @@ header.dark-mode h2 {
     max-width: 50px;
     height: auto;
 }
+.logo-container {
+    margin-right: auto;
+}
 
 /* DISCOVER PAGE */
 
@@ -455,7 +476,7 @@ header.dark-mode h2 {
     flex: 3;
     display:flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 8px;
 }
 .gallery img {
     width: 100%;

@@ -19,6 +19,12 @@
     <link rel="stylesheet" href="styles/medium.css">
     <link rel="stylesheet" href="styles/normalize.css">
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Madimi+One&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Madimi+One&family=Ojuju:wght@200..800&display=swap" rel="stylesheet">
 
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
@@ -26,7 +32,11 @@
 </head>
 <body>
     <header>
-        <img src="favicon_io/SanDiego-logo.webp" alt="logo" class="logo">
+        <div class="logo-container">
+            <a href="index.html">
+                <img src="favicon_io/SanDiego-logo.webp" alt="logo" class="logo">
+            </a>
+        </div>
         <h1>San Diego | Chamber of Commerce</h1>
         <button id="menu">&#9776;</button>
         <nav class="navigation">
@@ -59,9 +69,39 @@
     <!-- <img src="images/SanDiego_Skyline_.jpg.webp" alt="San Diego"> -->
     <main>
         <button class="join" onclick="window.location.href='join.html'">Join the Chamber!</button>
+        
         <section class="card1"> 
             <h2>Upcoming Events</h2>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus esse quae amet itaque. Eos asperiores esse, sunt maxime deserunt veniam ipsa facere quaerat, vero quidem, architecto iste repellendus incidunt harum?</p>
+            
+            <article>
+                <h3>San Diego Restaurant Week</h3>
+                <p>February 23 - March 1, 2024</p>
+                <p>Explore San Diego's vibrant culinary scene during Restaurant Week, where participating restaurants offer special prix-fixe menus showcasing their best dishes at discounted prices.</p>
+            </article>
+        
+            <article>
+                <h3>San Diego International Film Festival</h3>
+                <p>March 10 - March 14, 2024</p>
+                <p>Experience the magic of cinema at the San Diego International Film Festival, featuring a diverse selection of films from around the world, celebrity appearances, panel discussions, and more.</p>
+            </article>
+        
+            <article>
+                <h3>San Diego Zoo Safari Park Spring Butterfly Jungle</h3>
+                <p>March 21 - April 28, 2024</p>
+                <p>Immerse yourself in the beauty of nature at the San Diego Zoo Safari Park's Spring Butterfly Jungle event, where thousands of butterflies flutter freely in a tropical oasis.</p>
+            </article>
+        
+            <article>
+                <h3>Cherry Blossom Festival</h3>
+                <p>March 29 - April 7, 2024</p>
+                <p>Celebrate the arrival of spring at the Cherry Blossom Festival in Balboa Park, where visitors can enjoy traditional Japanese music and dance performances, tea ceremonies, and admire the blooming cherry blossoms.</p>
+            </article>
+        
+            <article>
+                <h3>San Diego Comic-Con International</h3>
+                <p>July 18 - July 21, 2024</p>
+                <p>Join thousands of fans from around the world at the iconic San Diego Comic-Con International, the largest comic book and pop culture convention in the world, featuring celebrity guests, panel discussions, exclusive merchandise, and more.</p>
+            </article>
         </section>
 
         <section class="card2">
@@ -78,7 +118,12 @@
 
         <section class="card3">
             <h2>Spotlight of the Week</h2>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestiae veritatis aut dignissimos iusto accusantium molestias, exercitationem voluptate eaque maiores doloremque omnis, quibusdam voluptatem eius! Magni doloremque repudiandae ex veritatis quo.</p>
+            <article>
+                <h3>Featured Business: Pacific Coast Surf Shop</h3>
+                <p>Pacific Beach, San Diego</p>
+                <p>Discover the thrill of surfing at Pacific Coast Surf Shop, located in the heart of Pacific Beach. Whether you're a beginner or a seasoned pro, our expert instructors and wide selection of equipment will help you catch the perfect wave.</p>
+                <a href="#">Visit Us</a>
+            </article>
         </section>
         <section class="card4">
             <h2>Windchill</h2>
