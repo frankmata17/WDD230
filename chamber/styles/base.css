@@ -752,8 +752,8 @@ label {
 /* BANNER */
 
 .banner {
-    background-color: #f6d3d3;
-    color: #333;
+    background-color: #335e8c;
+    color: #ffffff;
     padding: 10px;
     text-align: center;
     transition: transform 0.3s ease-in-out;
@@ -767,8 +767,9 @@ label {
 #closeBanner {
     background: none;
     border: none;
-    color: #007bff;
+    color: #ffffff;
     cursor: pointer;
+    text-decoration: underline;
 }
 
 /* WIND CHILL */
