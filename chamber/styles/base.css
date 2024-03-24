@@ -90,6 +90,20 @@ img {
     transform: translateY(-2px);
 
 }
+.navigation a.active {
+    text-decoration: underline !important;
+}
+/* Light Mode */
+body:not(.dark-mode) .navigation a.active {
+    text-decoration: underline; /* Underline the active link */
+    text-decoration-color: black; /* Dark color for the underline */
+}
+
+/* Dark Mode */
+body.dark-mode .navigation a.active {
+    text-decoration: underline; /* Underline the active link */
+    text-decoration-color: #ccc; /* Light color for the underline in dark mode */
+}
 
 .active::first-line {
     text-decoration: underline #f7e1d7;

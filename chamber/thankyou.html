@@ -5,14 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>San Diego Chamber of Commerce</title>
 
-    <meta name="description" content="A website for the San Diego Chamber of Commerce.">
+    <meta name="description" content="A thank you for filling out our form page. We will get back to you shortly.">
     <meta name="author" content="Francisco Mata">
 
     <meta property="og:url" content="https://frankmata17.github.io/wdd230/chamber/index.html">
     <meta property="og:type" content="website">
     <meta property="og:title" content="San Diego Chamber of Commerce">
     <meta property="og:image" content="https://www.visitcalifornia.com/places-to-visit/san-diego/">
-    <meta property="og:description" content="Chamber site home page for WDD 230">
+    <meta property="og:description" content="A thank you for filling out our form page. We will get back to you shortly.">
 
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/larger.css">
@@ -20,20 +20,31 @@
     <link rel="stylesheet" href="styles/normalize.css">
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Madimi+One&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Madimi+One&family=Ojuju:wght@200..800&display=swap" rel="stylesheet">
+
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
 </head>
 <body>
     <header class="dark-mode">
-        <img src="favicon_io/SanDiego-logo.webp" alt="logo" class="logo">
+        <div class="logo-container">
+            <a href="index.html">
+                <img src="favicon_io/SanDiego-logo.webp" alt="logo" class="logo">
+            </a>
+        </div>
         <h1>San Diego | Chamber of Commerce</h1>
         <button id="menu">&#9776;</button>
         <nav class="navigation">
             <a id="Home" href="index.html">Home</a>
             <a id="Discover" href="discover.html">Discover</a>
-            <a id="Directory" href="#">Directory</a>
-            <a id="Join" href="#">Join</a>
+            <a id="Directory" href="directory.html">Directory</a>
+            <a id="Join" href="join.html">Join</a>
         </nav>
         <label class="switch">
             <input type="checkbox">
@@ -66,6 +77,7 @@
     </footer>
     <script src="scripts/darkmode.js"></script>
     <script src="scripts/navigation.js"></script>
+    <script src="scripts/navLinks.js"></script>
     <script>
         // Set the value of the hidden input field with the current date/time
         document.getElementById("form-load-time").value = Date.now();
