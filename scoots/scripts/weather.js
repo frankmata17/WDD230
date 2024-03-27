@@ -30,7 +30,7 @@ function displayWeather(currentData, forecastData) {
     const currentTemp = currentData.main.temp;
     const currentHumidity = currentData.main.humidity;
     weatherDataElement.innerHTML = `
-        <p>Current Temperature: ${currentTemp}°C</p>
+        <p>Current Temperature: ${currentTemp}°C </p>
         <p>Current Humidity: ${currentHumidity}%</p>
     `;
 
@@ -42,7 +42,7 @@ function displayWeather(currentData, forecastData) {
 
     if (nextDayForecast) {
         const nextDayTemp = nextDayForecast.main.temp;
-        weatherDataElement.innerHTML += `<p>Next Day's Forecast at 3:00pm: ${nextDayTemp}°C</p>`;
+        weatherDataElement.innerHTML += `<p>Tomorrow's Forecast at 3:00pm: ${nextDayTemp}°C </p>`;
     }
 
     // Display all weather data points

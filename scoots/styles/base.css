@@ -101,6 +101,12 @@ header img {
     justify-content: center;
     height: 300px;
 }
+.action img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    margin-bottom: 20px;
+}
 .action button.join {
     margin-top: 20px;
 }
@@ -191,4 +197,18 @@ button.join:hover {
 .weather-data img {
     width: 50px;
     height: 50px;
+}
+
+/* FOOTER */
+footer {
+    background-color: #2C3E50;
+    color: #ECF0F1;
+    padding: 20px 0;
+    text-align: center;
+    width: 100%;
+}
+
+.contact-info p,
+.social-media a {
+    margin: 10px 0;
 }
