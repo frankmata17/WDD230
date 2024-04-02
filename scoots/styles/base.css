@@ -32,6 +32,24 @@
         flex-direction: column;
         align-items: center;
     }
+    .reservations-container {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .rental-agreement,
+    .reservation-form {
+        padding: 10px;
+    }
+
+    form {
+        display: block;
+    }
+
+    button {
+        width: 100%;
+    }
 }
 
 header {
@@ -101,6 +119,9 @@ header img {
     justify-content: center;
     height: 300px;
 }
+.action h3 {
+    padding-top: 55px;
+}
 .action img {
     width: 100%;
     max-width: 400px;
@@ -136,6 +157,10 @@ button.join:hover {
     font-weight: bold;
     font-size: larger;
     margin-top: 30px;
+}
+
+.info h3 {
+    padding-top: 55px;
 }
 
 .rentals-list {
@@ -201,7 +226,7 @@ button.join:hover {
 
 /* FOOTER */
 footer {
-    background-color: #2C3E50;
+    background-color: #50c1bc;
     color: #ECF0F1;
     padding: 20px 0;
     text-align: center;
@@ -211,4 +236,162 @@ footer {
 .contact-info p,
 .social-media a {
     margin: 10px 0;
+    color: white;
+}
+
+/* RENTALS */
+
+.rental-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    margin-top: 50px;
+    padding: 20px;
+}
+
+table {
+    width: 80%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tr:hover {
+    background-color: #ddd;
+}
+
+/* RESERVATIONS */
+
+.reservations-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    padding: 20px;
+}
+
+.rental-agreement,
+.reservation-form {
+    border: 1px solid #ccc;
+    padding: 20px;
+    background-color: #f9f9f9; /* Light background color for contrast */
+    border-radius: 8px; /* Rounded corners for aesthetics */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+}
+
+.rental-agreement h2 {
+    text-align: center; /* Center the title */
+    margin-bottom: 20px; /* Add spacing below the title */
+}
+
+.rental-agreement ul {
+    list-style-type: disc; /* Use bullets for list items */
+    padding-left: 20px; /* Indent the list items for better readability */
+}
+
+.rental-agreement li {
+    margin-bottom: 10px; /* Add spacing between list items */
+}
+
+form {
+    display: grid;
+    grid-gap: 10px;
+}
+
+label {
+    font-weight: bold;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+
+/* CONTACT */
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.map-container {
+    width: 100%;
+    max-width: 800px;
+    margin-top: 20px;
+}
+.map-section h2 {
+    text-align: center;
+}
+
+.contact-form-section {
+    text-align: center;
+    margin-top: 20px;
+    padding-bottom: 15px;
+}
+
+#contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    max-width: 400px; /* Set a maximum width */
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    box-sizing: border-box; /* Include padding and border in element's total width */
+}
+
+button[type="submit"] {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
 }

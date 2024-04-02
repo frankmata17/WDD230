@@ -1,0 +1,14 @@
+@media (min-width: 1201px) {
+    .reservations-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .rental-agreement,
+    .reservation-form {
+        padding: 30px;
+    }
+
+    .map-container {
+        max-width: 1000px;
+    }
+}

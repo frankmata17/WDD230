@@ -31,8 +31,65 @@
             <a href="contact.html">Contact</a>
         </nav>
     </header>
-    <main>
+    <main class="reservations-container">
+        <section class="rental-agreement">
+            <h2>Rental Agreement</h2>
+            <ul>
+                <li>A $50 security deposit is required to confirm reservations.</li>
+                <li>A valid driver's license is required in hand at the time of rental.</li>
+                <li>No one under the age of 12 years of age is allowed to ride on the scooters.</li>
+                <li>Fuel charge is not included.</li>
+                <li>Unlimited mileage.</li>
+                <li>Liability insurance is included.</li>
+                <li>Damage insurance is available for purchase.</li>
+                <li>Free delivery to Cozumel hotels or Airbnbs for 2+ day rentals.</li>
+                <li>Payment via Google Pay, Apple Pay, cash, credit card, debit card, or Venmo.</li>
+                <li>Rentals may be returned to either physical location.</li>
+            </ul>
+        </section>
+        <section class="reservation-form">
+            <h2>Reservation Details</h2>
+            <form>
+                <label for="date">Date:</label>
+                <input type="date" id="date" name="date" required>
 
+                <label for="period">Period:</label>
+                <select id="period" name="period" required>
+                    <option value="half-day">Half Day</option>
+                    <option value="full-day">Full Day</option>
+                </select>
+
+                <label for="rental-type">Rental Type:</label>
+                <select id="rental-type" name="rental-type" required>
+                    <option value="scooter">Scooter</option>
+                    <option value="atv">ATV</option>
+                    <option value="jeep">Jeep</option>
+                </select>
+
+                <label for="number">Number:</label>
+                <input type="number" id="number" name="number" min="1" required>
+
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" required>
+
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="state">Home State or Country:</label>
+                <input type="text" id="state" name="state" required>
+
+                <label for="cruise-line">Cruise Line:</label>
+                <input type="text" id="cruise-line" name="cruise-line">
+
+                <label for="special-requests">Special Accommodations/Comments:</label>
+                <textarea id="special-requests" name="special-requests" rows="4"></textarea>
+
+                <button type="submit">Submit Reservation</button>
+            </form>
+        </section>
     </main>
     <footer>
         <div class="contact-info">

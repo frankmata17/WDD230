@@ -4,9 +4,7 @@ document.addEventListener("DOMContentLoaded", function() {
     fetch('data/rentals.json')
         .then(response => response.json())
         .then(data => {
-            populateTable(data.rentals.scooters, 'scooterTable');
-            populateTable(data.rentals.atvs, 'atvTable');
-            populateTable(data.rentals.jeeps, 'jeepTable');
+            populateTable(data.rentals, 'rentalTable');
         })
         .catch(error => console.error('Error fetching rentals data:', error));
 });
@@ -17,8 +15,10 @@ function populateTable(rentals, tableId) {
     rentals.forEach(rental => {
         const row = document.createElement('tr');
         row.innerHTML = `
-            <td>${rental.name}</td>
-            <td>${rental.capacity}</td>
+            <td>${rental.type}</td>
+            <td>${rental.persons}</td>
+            <td>${rental.halfDay.reservation}</td>
+            <td>${rental.fullDay.reservation}</td>
         `;
         tableBody.appendChild(row);
     });

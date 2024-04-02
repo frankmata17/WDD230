@@ -2,8 +2,8 @@ import { apiKey } from './config.js';
 
 // Function to fetch weather data
 async function fetchWeather() {
-    const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=Cozumel&units=metric&appid=${apiKey}`;
-    const forecastUrl = `https://api.openweathermap.org/data/2.5/forecast?q=Cozumel&units=metric&appid=${apiKey}`;
+    const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=Cozumel&units=imperial&appid=${apiKey}`;
+    const forecastUrl = `https://api.openweathermap.org/data/2.5/forecast?q=Cozumel&units=imperial&appid=${apiKey}`;
 
     try {
         const [currentResponse, forecastResponse] = await Promise.all([
@@ -24,13 +24,13 @@ function displayWeather(currentData, forecastData) {
 
     // Display high temperature for the current day
     const tempMax = currentData.main.temp_max;
-    weatherMessage.textContent = `High Temperature Today: ${tempMax}°C`;
+    weatherMessage.textContent = `High Temperature Today: ${tempMax}°F`;
 
     // Display current temperature and humidity
     const currentTemp = currentData.main.temp;
     const currentHumidity = currentData.main.humidity;
     weatherDataElement.innerHTML = `
-        <p>Current Temperature: ${currentTemp}°C </p>
+        <p>Current Temperature: ${currentTemp}°F </p>
         <p>Current Humidity: ${currentHumidity}%</p>
     `;
 
@@ -42,7 +42,7 @@ function displayWeather(currentData, forecastData) {
 
     if (nextDayForecast) {
         const nextDayTemp = nextDayForecast.main.temp;
-        weatherDataElement.innerHTML += `<p>Tomorrow's Forecast at 3:00pm: ${nextDayTemp}°C </p>`;
+        weatherDataElement.innerHTML += `<p>Tomorrow's Forecast at 3:00pm: ${nextDayTemp}°F </p>`;
     }
 
     // Display all weather data points
