@@ -1,19 +1,70 @@
 @media (max-width: 768px) {
     .header-text h1 {
-        font-size: 1.5em;
+        font-size: 2em;
     }
 
     .header-text h2 {
-        font-size: 1.2em;
+        font-size: 2em;
+    }
+
+    .hamburger-menu {
+        font-size: 24px;
+        cursor: pointer;
+        transition: transform 0.3s ease;
+    }
+
+    .hamburger-menu.open {
+        transform: rotate(45deg);
+        transition: transform 0.3s ease;
+    }
+
+    .mobile-menu {
+        font-size: 2.5rem;
+        cursor: pointer;
+        /* position: absolute; */
+        top: 1rem;
+        right: 1rem;
+        z-index: 10;
+        padding: 10px;
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white;
+        transition: all 0.3s ease;
+    }
+    
+    .mobile-menu:hover {
+        font-size: 2rem;
+        padding: 10px;
+        background-color: rgba(0, 0, 0, 0.7);
+    }
+    
+    .mobile-menu.active {
+        font-size: 2.5rem;
+        padding: 10px;
+        border-radius: 50%;
+        background-color: rgba(0, 0, 0, 0.7);
+        color: white;
+    }
+    
+    .mobile-menu.active {
+        font-size: 2.5rem;
+        padding: 10px;
+        border-radius: 50%;
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white;
     }
 
     .navigation {
+        display: none;
         flex-direction: column;
+        top: 100%;
+        right: 0;
+        background-color: #fff;
+        border: 1px solid #ccc;
+        z-index: 10;
     }
 
-    .navigation a {
-        margin: 5px 0;
-        display: block;
+    .navigation.active {
+        display: flex;
     }
 
     main {
@@ -33,22 +84,47 @@
         align-items: center;
     }
     .reservations-container {
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-    }
-
-    .rental-agreement,
-    .reservation-form {
         padding: 10px;
     }
 
+    .rental-agreement, .reservation-form {
+        width: 100%;
+    }
+
+
     form {
-        display: block;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 20px;
     }
 
     button {
         width: 100%;
+    }
+    label, input, select, textarea, button {
+        width: 100%;
+    }
+    .map-container {
+        width: 100%;
+        max-width: 100%;
+        margin-top: 20px;
+        position: relative;
+        padding-bottom: 60%; /* Adjusted for smaller size */
+        max-height: 300px; /* Set a maximum height */
+        height: 0;
+        overflow: hidden; /* Added to prevent horizontal scrolling */
+    }
+
+    .map-container iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    .map-section h2 {
+        text-align: center;
     }
 }
 
@@ -87,7 +163,7 @@ header h2 {
     font-weight: bold;
 }
 .navigation a:hover {
-    color: rgb(111, 166, 232);
+    color: rgb(5, 70, 235);
     transform: scale(1.1);
 }
 .header-image {
@@ -182,18 +258,36 @@ button.join:hover {
 
 /* WEATHER */
 .weather {
-    border: 2px solid #ccc; /* Border for the weather container */
-    border-radius: 8px; /* Rounded corners */
-    padding: 20px; /* Padding inside the weather container */
-    margin-top: 80px; /* Margin to separate the weather section from the info section */
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    font-family: 'Arial', sans-serif;
+    margin-top: 80px;
+}
+
+.weather h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
 }
 
 .weather-card {
-    border: 1px solid #ddd; /* Border for each weather card */
-    border-radius: 4px; /* Rounded corners for each card */
-    padding: 15px; /* Padding inside each card */
-    margin-bottom: 15px; /* Margin to separate each card */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow for a raised effect */
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 250px; /* Adjust based on your design */
+    text-align: center;
+    background-color: #f9f9f9;
+}
+.weather-card p {
+    margin: 10px 0;
+    font-size: 16px;
+    color: #333;
+}
+.weather-card span {
+    font-weight: bold;
+    color: #555;
 }
 
 .weather-container {
@@ -203,16 +297,17 @@ button.join:hover {
 }
 
 .weather-message {
-    font-weight: bold;
-    font-size: larger;
-    margin-bottom: 10px;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 18px;
+    color: #555;
 }
 
 .weather-data {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    font-size: large;
+    gap: 20px;
 }
 
 .weather-data p {
@@ -277,33 +372,35 @@ tr:hover {
 /* RESERVATIONS */
 
 .reservations-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    flex-direction: column;
     gap: 20px;
     padding: 20px;
+    max-width: 60%;
+    margin: 0 auto;
 }
 
 .rental-agreement,
 .reservation-form {
     border: 1px solid #ccc;
     padding: 20px;
-    background-color: #f9f9f9; /* Light background color for contrast */
-    border-radius: 8px; /* Rounded corners for aesthetics */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .rental-agreement h2 {
-    text-align: center; /* Center the title */
-    margin-bottom: 20px; /* Add spacing below the title */
+    text-align: center;
+    margin-bottom: 20px;
 }
 
 .rental-agreement ul {
-    list-style-type: disc; /* Use bullets for list items */
-    padding-left: 20px; /* Indent the list items for better readability */
+    list-style-type: disc;
+    padding-left: 20px;
 }
 
 .rental-agreement li {
-    margin-bottom: 10px; /* Add spacing between list items */
+    margin-bottom: 10px;
 }
 
 form {
@@ -317,11 +414,14 @@ label {
 
 button {
     padding: 10px 20px;
-    background-color: #007BFF;
+    background-color: #50c1bc;
     color: white;
     border: none;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    width: 200px;
+    margin: auto;
+    text-align: center;
 }
 
 button:hover {
@@ -375,11 +475,11 @@ input[type="text"],
 input[type="email"],
 textarea {
     width: 100%;
-    max-width: 400px; /* Set a maximum width */
+    max-width: 400px;
     padding: 10px;
     border-radius: 4px;
     border: 1px solid #ccc;
-    box-sizing: border-box; /* Include padding and border in element's total width */
+    box-sizing: border-box;
 }
 
 button[type="submit"] {
@@ -394,4 +494,13 @@ button[type="submit"] {
 
 button[type="submit"]:hover {
     background-color: #0056b3;
+}
+/* MOBILE MENU */
+.mobile-menu {
+    font-size: 1.5rem;
+    cursor: pointer;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    z-index: 10;
 }

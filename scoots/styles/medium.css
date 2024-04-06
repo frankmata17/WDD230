@@ -11,4 +11,29 @@
     .map-container {
         max-width: 700px;
     }
+    .header-text .navigation {
+        display: flex;
+        text-align:end;
+        justify-content: space-between;
+        padding: 10px;
+        font-size: 1.5rem;
+        color: black;
+        z-index: 1;
+    }
+    
+    .header-text .navigation a {
+        text-decoration: none;
+        color: black;
+        font-weight: bold;
+    }
+    
+    .header-text .navigation a:hover {
+        color: rgb(111, 166, 232);
+        transform: scale(1.1);
+    }
+     /* Hamburger Menu */
+    .mobile-menu {
+        display: none;
+    }
+
 }
