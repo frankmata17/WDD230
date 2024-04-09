@@ -126,6 +126,19 @@
     .map-section h2 {
         text-align: center;
     }
+    .logo-container {
+        width: 100%;
+    }
+    .logo-container img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+body {
+    font-family: "IBM Plex Sans Condensed", sans-serif;
+    font-weight: 100;
+    font-style:normal;
 }
 
 header {
@@ -163,7 +176,7 @@ header h2 {
     font-weight: bold;
 }
 .navigation a:hover {
-    color: rgb(5, 70, 235);
+    color: #73c2fb;
     transform: scale(1.1);
 }
 .header-image {
@@ -208,14 +221,14 @@ header img {
     margin-top: 20px;
 }
 button.join {
-    background-color: #007BFF; /* Button background color */
-    color: white; /* Button text color */
-    padding: 12px 24px; /* Padding around button text */
-    border: none; /* Remove default button border */
-    border-radius: 5px; /* Rounded corners */
-    cursor: pointer; /* Cursor style */
-    font-size: 18px; /* Font size */
-    transition: background-color 0.3s ease, transform 0.3s ease; /* Transition effect for background color and transform */
+    background-color: #73c2fb;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 /* Button hover styles */
@@ -321,7 +334,7 @@ button.join:hover {
 
 /* FOOTER */
 footer {
-    background-color: #50c1bc;
+    background-color: #73c2fb;
     color: #ECF0F1;
     padding: 20px 0;
     text-align: center;
@@ -414,7 +427,7 @@ label {
 
 button {
     padding: 10px 20px;
-    background-color: #50c1bc;
+    background-color: #73c2fb;
     color: white;
     border: none;
     cursor: pointer;
@@ -484,7 +497,7 @@ textarea {
 
 button[type="submit"] {
     padding: 10px 20px;
-    background-color: #007BFF;
+    background-color: #73c2fb;
     color: white;
     border: none;
     border-radius: 4px;
@@ -503,4 +516,24 @@ button[type="submit"]:hover {
     top: 1rem;
     right: 1rem;
     z-index: 10;
+}
+.logo-container {
+    width: 10%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 10px;
+    z-index: 1;
+}
+.logo-container img:hover {
+    opacity: 1; /* Increases opacity on hover */
+}
+.logo-container img {
+    max-width: 100%;
+    height: auto;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+.logo-container a {
+    display: inline-block; /* Ensures the link takes up only as much space as necessary */
 }
